@@ -30,6 +30,6 @@ For checking the race condition we created three threads and also created a func
 3. Writing back to the memory 
 This works fine when we are working with a single thread but when we intriduce multiple thread then it will gives us a garbage value which is not the desired output.
 
-| Read Mails | #1    | #2    |
+| Read File | #1    | #2    |
 | :---:   | :---: | :---: |
 | Increament | 301   | 283   |
