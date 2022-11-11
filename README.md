@@ -48,5 +48,11 @@ Using a mutex we will solve
 locking and unlocking of mutex is protecting like it is protecting the block of code wihtin in a bracket to be executed by another thread. If in above example thread1 is executing the code in function , while incrementing the value thread2 and thread3 cannot execute the same line. 
 
 ## How To Create threads In LOOPS
-=======
->>>>>>> origin/main
+===================================
+1. For i  = 0 created first thread Then we are also joining it
+2. We are going to get only on thread  executing at a time
+3. If we are doing both create and join in the same for loop then only one thread will execute and remaining will wait n watch.
+4. We don't have to do such bu******
+5. So to avoid this create another loop for join and make it seprate loop for create_function.
+6. THings will start getting executed parallel 
+7. All threads will be create and same time they will finish their execution
