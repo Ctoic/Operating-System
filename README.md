@@ -29,9 +29,11 @@ For checking the race condition we created three threads and also created a func
 2. Increament the value 
 3. Writing back to the memory 
 This works fine when we are working with a single thread but when we intriduce multiple thread then it will gives us a garbage value which is not the desired output.
-| Read Mails | #1    | #2    |
+
+| Read File | #1    | #2    |
 | :---:   | :---: | :---: |
 | Increament | 301   | 283   |
+<<<<<<< HEAD
 
 This race condition ocuured for large value of loop iterator not for a small number because for small number first threads creates and execute the function body in less time and in that time second thread is created but for large value it takes more time second thread is created and it also calls the function which creates ambiguity. And we get wrong answers.
 
@@ -46,3 +48,5 @@ Using a mutex we will solve
 locking and unlocking of mutex is protecting like it is protecting the block of code wihtin in a bracket to be executed by another thread. If in above example thread1 is executing the code in function , while incrementing the value thread2 and thread3 cannot execute the same line. 
 
 ## How To Create threads In LOOPS
+=======
+>>>>>>> origin/main
