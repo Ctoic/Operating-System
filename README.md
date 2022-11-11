@@ -44,3 +44,5 @@ Using a mutex we will solve
 5. Now run te program again 
 6. You will get the right answer 
 locking and unlocking of mutex is protecting like it is protecting the block of code wihtin in a bracket to be executed by another thread. If in above example thread1 is executing the code in function , while incrementing the value thread2 and thread3 cannot execute the same line. 
+
+## How To Create threads In LOOPS
