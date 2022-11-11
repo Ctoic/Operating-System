@@ -33,4 +33,3 @@ This works fine when we are working with a single thread but when we intriduce m
 | :---:   | :---: | :---: |
 | Increament | 301   | 283   |
 | :---:   | :---: | :---: | 
-| write mails | 24| |25| 
