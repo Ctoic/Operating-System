@@ -4,18 +4,26 @@
 
 
 int mails  = 0 ;
+pthread_mutex_t mutex;
 
 void* routine()
 {
     for(int i  = 0 ; i <1000000 ; i++)
         {
-            mails++;
-        }
+            // Wait unti the lock is 0
+                pthread_mutex_lock(&mutex);
+                mails++;
+                pthread_mutex_unlock(&mutex);
+
+            }
+    
 }
 
 int main(int argc , void* argv[])
 {
     pthread_t p1 , p2 ,p3;
+    pthread_mutex_init(&mutex , NULL);
+
     if(pthread_create(&p1 , NULL , &routine , NULL) !=0)
     {
         return 1;
@@ -47,6 +55,7 @@ int main(int argc , void* argv[])
 
     }
     
+        pthread_mutex_destroy(&mutex);
 
     printf("Number of mails : %d \n", mails);
 
