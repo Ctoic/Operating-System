@@ -56,3 +56,10 @@ locking and unlocking of mutex is protecting like it is protecting the block of 
 5. So to avoid this create another loop for join and make it seprate loop for create_function.
 6. THings will start getting executed parallel 
 7. All threads will be create and same time they will finish their execution
+
+## How to Get A return Value from a function
+1. If your function has a void return type no return value
+2. pthread_join will take a refrence to pointer 
+3. Void pointers are wild cards they canbe anything 
+4. We cannot return a simple variable from the function because after execution stack frame of that function will be deallocated all variables will be de allocated. So for that we have to allocate chunk of memory Dynamically. 
+5.  
