@@ -49,11 +49,6 @@ class List
 
     }
 
-    void delete(int data_delete)
-    {
-    
-    }
-
 
 };
 
