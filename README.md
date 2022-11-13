@@ -1,23 +1,22 @@
 # In this repo I'm going to Include source code for creating threads and processes.
 
 ## Process 
+<div>
 A process is program in its execution state.
 Concept of Process has two facets.
 
 A Process is:
 A Unit of resource ownership:
-
 1. A virtual address space for the process image
 2. Control of some resources (files, I/O devices...)
-
-
 A Unit of execution:
-
-1. process is an execution path through one or
-    more programs 
+    1. process is an execution path through one or more programs 
     2. may be interleaved with other processes
     execution state (Ready, Running, Blocked...) and dispatching
     priority
+
+</div>
+
 ## Threads
 A light weight process which sharres common memory when created. 
 THreads are sharing memory.
@@ -30,11 +29,11 @@ For checking the race condition we created three threads and also created a func
 3. Writing back to the memory 
 This works fine when we are working with a single thread but when we intriduce multiple thread then it will gives us a garbage value which is not the desired output.
 
-| Read File | #1    | #2    |
+| Read File | 1000   | 2003    |
 | :---:   | :---: | :---: |
-| Increament | 301   | 283   |
+| Increament | 1001   | 2004  |
 | :---:   | :---: | :---: |
-| Write file | #1    | #2    |
+| Write file | 1001    | 2004    |
 | :---:   | :---: | :---: |
 
 This race condition ocuured for large value of loop iterator not for a small number because for small number first threads creates and execute the function body in less time and in that time second thread is created but for large value it takes more time second thread is created and it also calls the function which creates ambiguity. And we get wrong answers.
