@@ -28,6 +28,28 @@ For checking the race condition we created three threads and also created a func
 2. Increament the value 
 3. Writing back to the memory 
 This works fine when we are working with a single thread but when we intriduce multiple thread then it will gives us a garbage value which is not the desired output.
+Critical Section : When we hae a resource example a global variable 
+
+void* function1( void*arg)
+{
+
+}
+
+void* function2(void* arg)
+{
+
+
+}
+int main()
+
+{
+pthread_t t[4];
+for(int i =0 ; i < 4 ; i++)
+{
+    pthread_create(t+1 , NULL , function1 , NULL);
+   
+}
+
 
 | Read File | 1000   | 2003    |
 | :---:   | :---: | :---: |
